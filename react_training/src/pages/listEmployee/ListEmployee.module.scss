@@ -1,0 +1,41 @@
+@import "src/styles/index";
+
+.top__bar {
+  @include horizontal_list;
+  color: white;
+  padding: 10px;
+  background-color: blue !important;
+  border-bottom: 2px solid white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  color: blue;
+  padding: 10px;
+  background-color: white !important;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.action__button {
+  display: flex;
+}
+
+.menu__icon {
+  margin-top: 40px;
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: column !important;
+}
+
+.menu__icon ul {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: column !important;
+}

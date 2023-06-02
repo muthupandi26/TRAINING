@@ -1,0 +1,137 @@
+openapi: 3.0.0
+info:
+  title: Backend code for React training
+  version: 1.0.0
+  description: Refer this doc to intergrate the service
+servers:
+  - url: http://localhost:8080
+    description: Development server
+paths:
+  /health:
+    get:
+      summary: Health Check
+      description: Check the health of the server
+      responses:
+        '200':
+          description: Server is healthy
+  /employees:
+    get:
+      summary: Get all employees
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Employee'
+    post:
+      summary: Create a new employee
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmployeeInput'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Employee'
+  /employees/{id}:
+    get:
+      summary: Get an employee by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Employee'
+        '404':
+          description: Employee not found
+    put:
+      summary: Update an employee by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmployeeInput'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Employee'
+        '404':
+          description: Employee not found
+    delete:
+      summary: Delete an employee by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Employee'
+        '404':
+          description: Employee not found
+components:
+  schemas:
+    EmployeeInput:
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+        phoneNo:
+          type: number
+        domain:
+          type: string
+      required:
+        - firstName
+        - email
+        - phoneNo
+    Employee:
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+        phoneNo:
+          type: number
+        domain:
+          type: string
+      required:
+        - firstName
+        - email
+        - phoneNo

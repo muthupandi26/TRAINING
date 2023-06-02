@@ -1,0 +1,34 @@
+.vscode/
+# react_training
+
+# Dependency directories
+react_training/node_modules/
+
+# Build output
+react_training/build/
+react_training/dist/
+react_training/.next/
+react_training/out/
+
+# training-backend
+
+# Dependency directories
+training-backend/node_modules/
+
+# Build output
+training-backend/build/
+training-backend/dist/
+
+# Environment files
+react_training/.env
+training-backend/.env
+
+# IDE files
+react_training/.vscode/
+training-backend/.vscode/
+react_training/.idea/
+training-backend/.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db

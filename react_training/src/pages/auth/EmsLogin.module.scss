@@ -1,0 +1,11 @@
+@import "src/styles/index";
+
+h2 {
+  margin-left: 5rem;
+  color: white;
+}
+
+.container {
+  @include center_div;
+  margin-top: 8rem;
+}

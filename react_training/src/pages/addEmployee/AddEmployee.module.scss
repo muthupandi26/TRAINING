@@ -1,0 +1,13 @@
+@import "src/styles/index";
+
+.container__box {
+  @include flex_space_around;
+}
+
+.visible {
+  visibility: hidden !important;
+}
+
+.button {
+  margin-top: 5rem;
+}

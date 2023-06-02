@@ -1,0 +1,28 @@
+{
+  "name": "training-backend",
+  "version": "1.0.0",
+  "description": "backend server for training app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongoose",
+    "swagger",
+    "joi"
+  ],
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.3",
+    "joi": "^17.9.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.0.6",
+    "swagger-ui-express": "^4.1.6",
+    "yamljs": "^0.3.0"
+  }
+}
